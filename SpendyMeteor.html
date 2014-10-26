@@ -5,14 +5,22 @@
 <body>
   <h1>Spendy</h1>
   
+  {{> controls}}
+
+  {{> list}}
+
+</body>
+
+<template name="list">
+  <p>Spendy list:</p>
+  {{#each items }}
+  	<li class="{{doneClass}}">{{description}}</li>
+  {{/each}}
+</template>
+
+<template name="controls">
   <form>
     <input type="text" id="newItem" />
     <input type="submit" id="add" value="Add" />
   </form>
-  	
-  {{> list}}
-</body>
-
-<template name="list">
-  <p>You've pressed the button {{counter}} times.</p>
 </template>
