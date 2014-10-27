@@ -1,5 +1,28 @@
 body {
+	background: #dae3e7;
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(218, 227, 231);
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
+}
 
+#spendy-title {
+	color: #49515a;
+	font-size: 38px;
+	margin-bottom: 5px;
+	margin-top: 30px;
+	font-weight: 700;
+	color: #778492;
+	text-align: center;
+	margin: 40px;
 }
 
 #spendy-title2 {
