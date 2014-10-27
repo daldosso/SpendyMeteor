@@ -1,3 +1,37 @@
+body {
+
+}
+
+#spendy-title2 {
+	font-size: 70px;
+	text-align: center;
+	color: rgba(255,255,255,.3);
+	text-shadow: -1px -1px rgba(0,0,0,.2);
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	-ms-text-rendering: optimizeLegibility;
+	-o-text-rendering: optimizeLegibility;
+	font-size: 1.5em;
+	-webkit-margin-before: 0.83em;
+	-webkit-margin-after: 0.83em;
+	display: block;
+	font-size: 2em;
+	-webkit-margin-before: 0.67em;
+	-webkit-margin-after: 0.67em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	font-weight: bold;
+	font: 14px 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	line-height: 1.4em;
+	background: #eaeaea url(bg.png);
+	width: 550px;
+	margin: 0 auto;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
 .done {
 	text-decoration: line-through;
 }
