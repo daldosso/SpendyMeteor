@@ -17,29 +17,29 @@ if (Meteor.isClient) {
   Template.controls.events({
     'submit form': function(event) {
       event.preventDefault();
-      var description = $(event.target).find('[id=newItem]').val();
-      Items.insert({ description: description });
+      var date = $(event.target).find('[id=date]').val();
+      var amount = $(event.target).find('[id=amount]').val();
+      var category = $(event.target).find('[id=category]').val();
+      var note = $(event.target).find('[id=note]').val();
+      Items.insert({ 
+        date: date,
+        amount: amount,
+        category: category,
+        note: note
+      });
     }
   });
 
   Template.list.events({
     'click li': function() {
-      Items.update({_id:this._id}, {$set:{done:!this.done}})
+      //Items.update({_id:this._id}, {$set:{done:!this.done}})
+      Items.remove({_id:this._id});
     }
   });
 }
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    if (Items.find().count() == 0) {
-      var items = [{
-        description: 'Item 1'
-      }, {
-        description: 'Item 2'
-      }];
-      for (var i=0; i<items.length; i++) {
-        Items.insert(items[i]);
-      }
-    }
+    
   });
 }

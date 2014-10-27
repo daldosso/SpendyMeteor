@@ -14,13 +14,16 @@
 <template name="list">
   <p>Spendy list:</p>
   {{#each items }}
-  	<li class="{{doneClass}}">{{description}}</li>
+  	<li class="{{doneClass}}">{{date}}, {{amount}}, {{category}}, {{note}}</li>
   {{/each}}
 </template>
 
 <template name="controls">
   <form>
-    <input type="text" id="newItem" />
+    Data: <input type="text" id="date" />
+    Importo: <input type="text" id="amount" />
+    Categoria: <input type="text" id="category" />
+    Note: <input type="text" id="note" />
     <input type="submit" id="add" value="Add" />
   </form>
 </template>
