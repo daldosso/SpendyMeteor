@@ -33,9 +33,15 @@ if (Meteor.isClient) {
   Template.list.events({
     'click li': function() {
       //Items.update({_id:this._id}, {$set:{done:!this.done}})
-      Items.remove({_id:this._id});
+      var currentId = this._id;
+      $("#modal_content")
+        .modal("show")
+        .one('click', '#delete', function (e) {
+            Items.remove({_id: currentId});
+        });
     }
   });
+
 }
 
 if (Meteor.isServer) {
