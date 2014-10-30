@@ -1,6 +1,7 @@
 Items = new Meteor.Collection('items');
 
 if (Meteor.isClient) {
+  
   Template.list.helpers({
     items: function() {
       return Items.find();  
@@ -13,6 +14,10 @@ if (Meteor.isClient) {
       }
     }
   });
+
+  Template.controls.rendered = function() {
+    $('.datepicker').datepicker();
+  };
 
   Template.controls.events({
     'submit form': function(event) {
